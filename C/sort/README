@@ -1,0 +1,22 @@
+1.术语铺垫
+  (1)稳定排序：如果a原本在b的前面，且a == b，排序之后a仍然在b的前面，则为稳定排序。
+  (2)非稳定排序：如果a原本在b的前面，且a == b，排序之后a可能不在b的前面，则为非稳定排序。
+  (3)原地排序：原地排序就是指在排序过程中不申请多余的存储空间，只利用原来存储待排数据的存储空间进行比较和交换的数据排序。
+  (4)非原地排序：需要利用额外的数组来辅助排序。
+  (5)时间复杂度：一个算法执行所消耗的时间。
+  (6)空间复杂度：运行完一个算法所需的内存大小。
+
+
+2.各类排序算法的比较
+  排序算法   平均时间复杂度      最好情况        最坏情况        空间复杂度      排序方式        稳定性
+  选择排序      O(n^2)         O(n^2)         O(n^2)          O(1)        In-place       不稳定
+  插入排序      O(n^2)          O(n)          O(n^2)          O(1)        In-place        稳定
+  冒泡排序      O(n^2)          O(n)          O(n^2)          O(1)        In-place        稳定
+  希尔排序    O(n log n)     O(n log^2 n)    O(n log^2 n)     O(1)        In-place       不稳定
+  归并排序    O(n log n)     O(n log n)      O(n log n)       O(n)        Out-place       稳定
+  快速排序    O(n log n)     O(n log n)       O(n^2)        O(log n)      In-place       不稳定
+  堆排序      O(n log n)     O(n log n)      O(n log n)       O(1)        In-place       不稳定
+  计数排序     O(n + k)        O(n + k)       O(n + k)        O(k)        Out-place       稳定
+  桶排序       O(n + k)        O(n + k)       O(n + k)      O(n + k)      Out-place       稳定
+  基数排序     O(n * k)        O(n * k)       O(n * k)       O(n + k)     Out-place       稳定
+  
