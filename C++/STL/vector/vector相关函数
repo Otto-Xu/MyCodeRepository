@@ -1,0 +1,31 @@
+vector<A> std::v;
+
+v.empty();//判断是否为空，返回bool值
+v.size();//返回容器中的元素个数
+v.max_size();//返回容器的容量
+
+v.front();//得到头元素
+v.back();//得到尾元素
+v.at(int i);//得到下标为i的元素，若下标越界，会抛出异常
+
+v1.swap(v2);//将v1和v2进行交换，系统函数版本
+v.swap(v1, v2);//同上，系统函数版本
+
+assign(iter1, iter2);//将容器元素更换为一个迭代器的区间元素
+assign(n, t);//将容器元素变为n个t元素
+
+v.insert(iter, t);//在迭代器iter处插入t，返回所插位置处的迭代器
+v.insert(v.end(), 10, t);//在容器v的末尾插入10个元素，每个元素都是t。
+v.insert(v.end(), {"a", "b", ...});//将后面花括号的每个元素插入容器v的尾部。
+v.insert(v.begin(), v2,end()-2, v2,end());//将容器v2的最后两个元素插入容器v的头部。
+
+v.push_back(t);//尾部追加元素t
+v.pop_back();//删除尾部元素
+
+v.earse(iter);//删除迭代器iter所指位置处的元素。
+v.earse(iter1, iter2);//删除迭代器iter1与iter2区间内的元素。
+v.clear();//清空容器，重新初始化容器
+
+v.resize(n);//将容器v的元素变为n个。若n < 原始元素个数，删除多余元素。若n > 原始元素个数，则用默认初始值初始化容器。
+v.resize(n, t);//将容器元素变为n个t。与容器原始个数无关。
+v.reserve(n);//为容器v重新分配n个内存空间，如果n <= 当前容器大小，则什么都不做。
