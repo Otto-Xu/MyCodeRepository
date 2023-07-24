@@ -5,22 +5,22 @@ using namespace cv;
 
 /*
 void cv::erode(
-	cv::InputArray		src,								// Input image
-	cv::0utputArray		dst,								// Result image
-	cv::InputArray		element,							// Structuring, a cv::Mat()
-	cv::Point			anchor		= cv::Point(-1,-1),		// Location of anchor point
-	int					iterations	= 1£¬					// Number of times to apply
-	int					borderType	= cv::BORDER CONSTANT	// Border extrapolation
+	cv::InputArray		src,							// Input image
+	cv::0utputArray		dst,							// Result image
+	cv::InputArray		element,						// Structuring, a cv::Mat()
+	cv::Point		anchor		= cv::Point(-1,-1),			// Location of anchor point
+	int			iterations	= 1Â£Â¬					// Number of times to apply
+	int			borderType	= cv::BORDER CONSTANT			// Border extrapolation
 	const cv::Scalar&	borderValue = cv::morphologyDefaultBorderValue()
 );
 
 void cv::dilate(
-	cv::InputArray		src,								// Input image
-	cv::0utputArray		dst,								// Result image
-	cv::InputArray		element,							// Structuring, a cv::Mat()
-	cv::Point			anchor		= cv::Point(-1,-1),		// Location of anchor point
-	int					iterations	= 1£¬					// Number of times to apply
-	int					borderType	= cv::BORDER CONSTANT	// Border extrapolation
+	cv::InputArray		src,							// Input image
+	cv::0utputArray		dst,							// Result image
+	cv::InputArray		element,						// Structuring, a cv::Mat()
+	cv::Point		anchor		= cv::Point(-1,-1),			// Location of anchor point
+	int			iterations	= 1Â£Â¬					// Number of times to apply
+	int			borderType	= cv::BORDER CONSTANT			// Border extrapolation
 	const cv::Scalar&	borderValue = cv::morphologyDefaultBorderValue()
 );
 */
