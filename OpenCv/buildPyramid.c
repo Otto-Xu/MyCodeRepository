@@ -5,9 +5,9 @@ using namespace cv;
 
 /*
 void cv::buildPyramid(
-	cv::InputArray		src,								// Input image
-	cv::0utputArray		dst,								// Result image
-	int					maxlevel							// Number of pyramid levels
+	cv::InputArray		src,			// Input image
+	cv::0utputArray		dst,			// Result image
+	int			maxlevel		// Number of pyramid levels
 )
 */
 
