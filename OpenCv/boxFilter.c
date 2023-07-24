@@ -5,13 +5,13 @@ using namespace cv;
 
 /*
 void cv::blur(
-	cv::InputArray	src,							// Input image
-	cv::0utputArray dst,							// Result image
-	int				ddepth,							// 0utput depth (e.g.,CV_8U)
-	cv::Size		ksize,							// Kernel size
-	cv::Pointint	anchor = cv::Point(-1,-1)，		// Location of anchor point
-	bool			normalize = true,				// If true, divide by box area 
-	int				borderType = cv::BORDER_DEFAULT // Border extrapolation to use
+	cv::InputArray		src,					// Input image
+	cv::0utputArray 	dst,					// Result image
+	int			ddepth,					// 0utput depth (e.g.,CV_8U)
+	cv::Size		ksize,					// Kernel size
+	cv::Pointint		anchor = cv::Point(-1,-1)，		// Location of anchor point
+	bool			normalize = true,			// If true, divide by box area 
+	int			borderType = cv::BORDER_DEFAULT 	// Border extrapolation to use
 );
 
 OpenCV中的函数cv::boxFilter()是一种一般化的形式，而cv::blur()是一种特殊化的形式。
