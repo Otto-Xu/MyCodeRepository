@@ -7,9 +7,9 @@ using namespace cv;
 double cv::threshold(
 	cv::InputArray		src,				// Input image
 	cv::0utputArray		dst,				// Result image
-	double				thresh,				// Threshold value
-	double				maxValue，			// Max value for upward operations
-	int					thresholdType		// Threshold type to use (Example 10-3)
+	double			thresh,				// Threshold value
+	double			maxValue，			// Max value for upward operations
+	int			thresholdType			// Threshold type to use (Example 10-3)
 );
 
 阙值类型						操作
