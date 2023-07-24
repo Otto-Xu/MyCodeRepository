@@ -15,8 +15,8 @@ void cv::erode(
 	const cv::Scalar&	borderValue = cv::morphologyDefaultBorderValue()
 );
 
-MORPH_OPEN			开操作，先腐蚀再膨胀（两次开操作，腐蚀腐蚀膨胀膨胀）
-MORPH_CLOSE			闭操作，先膨胀再腐蚀
+MORPH_OPEN		开操作，先腐蚀再膨胀（两次开操作，腐蚀腐蚀膨胀膨胀）
+MORPH_CLOSE		闭操作，先膨胀再腐蚀
 MORPH_TOPHAT		顶帽操作，TopHat(src) = src - open(src)		//Isolate brighter，得到了比源图像更亮的环绕部分
 MORPH_BLACKHAT		底帽操作，BlackHat(src) = close(src) - src	//Isolate dimmer ， 得到了比源图像更暗的环绕部分
 MORPH_GRADIENT		形态学梯度，gradient(src) = dilate(src) - erode(src)
