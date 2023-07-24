@@ -5,21 +5,21 @@ using namespace cv;
 
 /*
 void cv::erode(
-	cv::InputArray		src,								// Input image
-	cv::0utputArray		dst,								// Result image
-	int					op,									// Operator(e.g. MORPH_OPEN)
-	cv::InputArray		element,							// Structuring, a cv::Mat()
-	cv::Point			anchor		= cv::Point(-1,-1),		// Location of anchor point
-	int					iterations	= 1£¬					// Number of times to apply
-	int					borderType	= cv::BORDER CONSTANT	// Border extrapolation
+	cv::InputArray		src,							// Input image
+	cv::0utputArray		dst,							// Result image
+	int			op,							// Operator(e.g. MORPH_OPEN)
+	cv::InputArray		element,						// Structuring, a cv::Mat()
+	cv::Point		anchor		= cv::Point(-1,-1),			// Location of anchor point
+	int			iterations	= 1ï¼Œ					// Number of times to apply
+	int			borderType	= cv::BORDER CONSTANT			// Border extrapolation
 	const cv::Scalar&	borderValue = cv::morphologyDefaultBorderValue()
 );
 
-MORPH_OPEN			¿ª²Ù×÷£¬ÏÈ¸¯Ê´ÔÙÅòÕÍ£¨Á½´Î¿ª²Ù×÷£¬¸¯Ê´¸¯Ê´ÅòÕÍÅòÕÍ£©
-MORPH_CLOSE			±Õ²Ù×÷£¬ÏÈÅòÕÍÔÙ¸¯Ê´
-MORPH_TOPHAT		¶¥Ã±²Ù×÷£¬TopHat(src) = src - open(src)		//Isolate brighter£¬µÃµ½ÁË±ÈÔ´Í¼Ïñ¸üÁÁµÄ»·ÈÆ²¿·Ö
-MORPH_BLACKHAT		µ×Ã±²Ù×÷£¬BlackHat(src) = close(src) - src	//Isolate dimmer £¬ µÃµ½ÁË±ÈÔ´Í¼Ïñ¸ü°µµÄ»·ÈÆ²¿·Ö
-MORPH_GRADIENT		ĞÎÌ¬Ñ§Ìİ¶È£¬gradient(src) = dilate(src) - erode(src)
+MORPH_OPEN			å¼€æ“ä½œï¼Œå…ˆè…èš€å†è†¨èƒ€ï¼ˆä¸¤æ¬¡å¼€æ“ä½œï¼Œè…èš€è…èš€è†¨èƒ€è†¨èƒ€ï¼‰
+MORPH_CLOSE			é—­æ“ä½œï¼Œå…ˆè†¨èƒ€å†è…èš€
+MORPH_TOPHAT		é¡¶å¸½æ“ä½œï¼ŒTopHat(src) = src - open(src)		//Isolate brighterï¼Œå¾—åˆ°äº†æ¯”æºå›¾åƒæ›´äº®çš„ç¯ç»•éƒ¨åˆ†
+MORPH_BLACKHAT		åº•å¸½æ“ä½œï¼ŒBlackHat(src) = close(src) - src	//Isolate dimmer ï¼Œ å¾—åˆ°äº†æ¯”æºå›¾åƒæ›´æš—çš„ç¯ç»•éƒ¨åˆ†
+MORPH_GRADIENT		å½¢æ€å­¦æ¢¯åº¦ï¼Œgradient(src) = dilate(src) - erode(src)
 */
 
 int main()
