@@ -5,12 +5,12 @@ using namespace cv;
 
 /*
 void cv::GaussianBlur(
-	cv::InputArray	src,							// Input image
-	cv::0utputArray dst,							// Result image
-	cv::Size		ksize,							// Kernel size
-	double			sigmaX,							// Gaussian half-width in x-direction
-	double 			sigmaY = 0.0,					// Gaussian half-width in y-direction
-	int				borderType = cv::BORDER_DEFAULT // Border extrapolation to use
+	cv::InputArray		src,					// Input image
+	cv::0utputArray 	dst,					// Result image
+	cv::Size		ksize,					// Kernel size
+	double			sigmaX,					// Gaussian half-width in x-direction
+	double 			sigmaY = 0.0,				// Gaussian half-width in y-direction
+	int			borderType = cv::BORDER_DEFAULT 	// Border extrapolation to use
 );
 */
 
