@@ -7,13 +7,13 @@ using namespace cv;
 void cv::threshold(
 	cv::InputArray		src,			// Input image
 	cv::0utputArray		dst,			// Result image
-	int					ddepth,			// Pixel depth of output(e.g., CV_8U)
-	int					xorder,			// order of corresponding derivative in x
-	int					yorder,			// order of corresponding derivative in y
-	cv::Size			ksize = 3,		// Kernel size 
-	double				scale = 1,		// Scale(applied before assignment)
-	double				delta = 0，		// Offset(applied before assignment)
-	int					broderType		// Border extrapolation
+	int			ddepth,			// Pixel depth of output(e.g., CV_8U)
+	int			xorder,			// order of corresponding derivative in x
+	int			yorder,			// order of corresponding derivative in y
+	cv::Size		ksize = 3,		// Kernel size 
+	double			scale = 1,		// Scale(applied before assignment)
+	double			delta = 0，		// Offset(applied before assignment)
+	int			broderType		// Border extrapolation
 );
 
 xorder和yorder是求导顺序，其取值范围为0、1和2。0表示在这个方向上不进行求导。
