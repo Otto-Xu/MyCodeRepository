@@ -5,11 +5,11 @@ using namespace cv;
 
 /*
 void cv::blur(
-	cv::InputArray	src,							// Input image
-	cv::0utputArray dst,							// Result image
-	cv::Size		ksize,							// Kernel size
-	cv::Pointint	anchor = cv::Point(-1,-1)，		// Location of anchor point
-	int				borderType = cv::BORDER_DEFAULT // Border extrapolation to use
+	cv::InputArray		src,					// Input image
+	cv::0utputArray 	dst,					// Result image
+	cv::Size		ksize,					// Kernel size
+	cv::Pointint		anchor = cv::Point(-1,-1)，		// Location of anchor point
+	int			borderType = cv::BORDER_DEFAULT 	// Border extrapolation to use
 );
 */
 
