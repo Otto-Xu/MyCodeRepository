@@ -5,14 +5,14 @@ using namespace cv;
 
 /*
 void cv::pyrDown(
-	cv::InputArray		src,								// Input image 
-	cv::0utputArray		dst,								// Result image
+	cv::InputArray		src,						// Input image 
+	cv::0utputArray		dst,						// Result image
 	const cv::Size&		dstsize = cv::Size()				// 0utput image size
 )
 
 void cv::pyrUp(
-	cv::InputArray		src,								// Input image 
-	cv::0utputArray		dst,								// Result image
+	cv::InputArray		src,						// Input image 
+	cv::0utputArray		dst,						// Result image
 	const cv::Size&		dstsize = cv::Size()				// 0utput image size
 )
 */
