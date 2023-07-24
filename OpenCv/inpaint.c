@@ -5,11 +5,11 @@ using namespace cv;
 
 /*
 void cv::inpaint(
-	cv::InputArray		src,								// Input image: 8-bit, 1 or 3 channels 
-	cv::InputArray		inpaintMask,				// 8-bit, 1 channel. Inpaint nonzeros
-	cv::0utputArray		dst,								// Result image
-	double				    inpaintRadius,			// Range to consider around pixel
-	int					      flags								// Select NS or TELEA
+	cv::InputArray		src,				// Input image: 8-bit, 1 or 3 channels 
+	cv::InputArray		inpaintMask,			// 8-bit, 1 channel. Inpaint nonzeros
+	cv::0utputArray		dst,				// Result image
+	double			inpaintRadius,			// Range to consider around pixel
+	int			flags				// Select NS or TELEA
 );
 */
 
