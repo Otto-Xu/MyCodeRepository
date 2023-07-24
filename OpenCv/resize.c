@@ -5,12 +5,12 @@ using namespace cv;
 
 /*
 void cv::resize(
-	cv::InputArray		src,								// Input image 
-	cv::0utputArray		dst,								// Result image
-	cv::Size			dsize,								// New size
-	double				fx = 0,								// x-rescale
-	double				fy = 0,								// y-rescale
-	int					interpolation = CV::INTER_LINEAR	// interpolation method
+	cv::InputArray		src,						// Input image 
+	cv::0utputArray		dst,						// Result image
+	cv::Size		dsize,						// New size
+	double			fx = 0,						// x-rescale
+	double			fy = 0,						// y-rescale
+	int			interpolation = CV::INTER_LINEAR		// interpolation method
 )
 cv::INTER_NEAREST	最近邻插值
 cv::INTER_LINEAR	双线性插值
