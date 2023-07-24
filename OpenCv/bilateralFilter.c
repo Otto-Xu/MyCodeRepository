@@ -5,12 +5,12 @@ using namespace cv;
 
 /*
 void cv::bilateralFilter(
-	cv::InputArray	src,							// Input image
-	cv::0utputArray dst,							// Result image
-	int 			d,								// Pixel neighborhood size(max distance)
-	double			sigmaColor,						// Width param for color.weight function
-	double 			sigmaSpace,						// Width param for spatial.weight function
-	int				borderType = cv::BORDER_DEFAULT // Border extrapolation to use
+	cv::InputArray		src,					// Input image
+	cv::0utputArray 	dst,					// Result image
+	int 			d,					// Pixel neighborhood size(max distance)
+	double			sigmaColor,				// Width param for color.weight function
+	double 			sigmaSpace,				// Width param for spatial.weight function
+	int			borderType = cv::BORDER_DEFAULT 	// Border extrapolation to use
 );
 */
 
