@@ -6,13 +6,13 @@ using namespace cv;
 
 /*
 void cv::adaptiveThreshold(
-	cv::InputArray	src,					// Input image
-	cv::0utputArray	dst,					// Result image
-	double			maxValue，				// Max value for upward operations
-	int				adaptiveMethod.			// mean or Gaussian
-	int				thresholdType，,		// Threshold type to use (Example 10-3)
-	int				blockSize,				// Block size
-	double			C						// Constant
+	cv::InputArray		src,				// Input image
+	cv::0utputArray		dst,				// Result image
+	double			maxValue，			// Max value for upward operations
+	int			adaptiveMethod.			// mean or Gaussian
+	int			thresholdType，,		// Threshold type to use (Example 10-3)
+	int			blockSize,			// Block size
+	double			C				// Constant
 )
 
 	cv::adaptiveThreshold()根据adaptiveMethod的设置，允许两种不同的自适应阙值方法。
