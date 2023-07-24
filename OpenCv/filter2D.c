@@ -5,13 +5,13 @@ using namespace cv;
 
 /*
 void cv::filter2D(
-	cv::InputArray	src,							// Input image
-	cv::0utputArray dst,							// Result image
-	int				ddepth,							// Output depth(e.g. CV_8U)
-	cv::InputArray	kernel,							// Your own kernel
-	cv::Pointint	anchor = cv::Point(-1,-1)，		// Location of anchor point
-	double 			delta  = 0,						// Offset before assignment
-	int				borderType = cv::BORDER_DEFAULT // Border extrapolation to use
+	cv::InputArray		src,						// Input image
+	cv::0utputArray 	dst,						// Result image
+	int			ddepth,						// Output depth(e.g. CV_8U)
+	cv::InputArray		kernel,						// Your own kernel
+	cv::Pointint		anchor = cv::Point(-1,-1)，			// Location of anchor point
+	double 			delta  = 0,					// Offset before assignment
+	int			borderType = cv::BORDER_DEFAULT 		// Border extrapolation to use
 );
 */
 
