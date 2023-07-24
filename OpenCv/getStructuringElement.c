@@ -5,16 +5,16 @@ using namespace cv;
 
 /*
 void cv::getStructuringElement(
-	int					shape,							// Element shape, e.g, cv::MORPH_RECT
-	cv::Size			ksize,							// Size of structuring element
+	int				shape,					// Element shape, e.g, cv::MORPH_RECT
+	cv::Size			ksize,					// Size of structuring element
 	cv::Point			anchor = cv::Point(-1,-1)		// Location of anchor point
 );
 
-MORPH_RECT		¾ØĞÎ
-MORPH_ELLIPSE	ÍÖÔ²ĞÎ
-MORPH_CROSS		½»²æ
+MORPH_RECT		çŸ©å½¢
+MORPH_ELLIPSE	æ¤­åœ†å½¢
+MORPH_CROSS		äº¤å‰
 
-ÓĞ¸öÎÊÌâ£¬Ã»·¨¶¨ÒåÕâ¸öºËÀïÃæµÄÔªËØ£¿
+æœ‰ä¸ªé—®é¢˜ï¼Œæ²¡æ³•å®šä¹‰è¿™ä¸ªæ ¸é‡Œé¢çš„å…ƒç´ ï¼Ÿ
 */
 
 int main()
