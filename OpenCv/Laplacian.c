@@ -7,11 +7,11 @@ using namespace cv;
 void cv::Laplacian(
 	cv::InputArray		src,			// Input image
 	cv::0utputArray		dst,			// Result image
-	int					ddepth,			// Depth of output image (e.g., CV_8U)
-	cv::Size			ksize = 3,		// Kernel size
-	double				scale = 1,		// Scale(applied before assignment to dst)
-	double				delta = 0£¬		// Offset(applied before assignment to dst)
-	int					broderType		// Border extrapolation
+	int			ddepth,			// Depth of output image (e.g., CV_8U)
+	cv::Size		ksize = 3,		// Kernel size
+	double			scale = 1,		// Scale(applied before assignment to dst)
+	double			delta = 0,		// Offset(applied before assignment to dst)
+	int			broderType		// Border extrapolation
 );
 */
 
