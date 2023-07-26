@@ -9,8 +9,7 @@ typedef struct CvPoint
     template<typename _Tp>
     operator cv::Point_<_Tp>() const { return cv::Point_<_Tp>(cv::saturate_cast<_Tp>(x), cv::saturate_cast<_Tp>(y)); }
 #endif
-}
-CvPoint;
+}CvPoint;
 ```
 Point类主要有两种模板，一种是二维的点Point2x，一种是三维的点Point3x，x可选如下：
 选项|含义
@@ -34,7 +33,20 @@ d|64-bit float
 判断点p是否在矩形r内|p.inside(r);
 
 ----------------------------------------------------------------------------------------------------------------------------------
-## Scalar类
+# Scalar类
+### 定义
+```
+typedef struct CvScalar
+{
+    double val[4];
+#ifdef __cplusplus
+    template<typename _Tp>
+    operator cv::Scalar_<_Tp>() const { return cv::Scalar_<_Tp>(cv::saturate_cast<_Tp>(val[0]), cv::saturate_cast<_Tp>(val[1]), cv::saturate_cast<_Tp>(val[2]), cv::saturate_cast<_Tp>(val[3])); }
+#endif
+}CvScalar;
+```
+Scalar是一个由长度为4的数组作为元素构成的结构体，Scalar最多可以存储四个值，没有提供的值默认为0。
+### Scalar类基本操作函数
 操作|示例
 -----|------
 默认构造函数|cv::Scalar s;
@@ -46,7 +58,7 @@ d|64-bit float
 
 
 ----------------------------------------------------------------------------------------------------------------------------------
-## Size类
+# Size类
 操作|示例
 ----|----
 默认构造函数|cv::Size sz;<br>cv::Size2i sz;<br>cv::Size2f sz;
@@ -57,7 +69,7 @@ d|64-bit float
 
 
 ----------------------------------------------------------------------------------------------------------------------------------
-## Rect类
+# Rect类
 操作|示例
 ----|----
 默认构造函数|cv::Rect r;
