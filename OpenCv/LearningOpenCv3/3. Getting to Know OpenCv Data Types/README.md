@@ -1,8 +1,17 @@
-#### Point类
+## Point类
+Point类主要有两种模板，一种是二维的点Point2x，一种是三维的点Point3x，x可选如下：
+选项|含义
+----|----
+b|unsigned char
+s|short int
+i|32-bit int
+f|32-bit float
+d|64-bit float
+#### Point类基本操作函数
 操作|示例
 --------|-----------
 默认构造函数|cv::Point2i p;<br>cv::Point3i p;
-复制构造函数|cv::Point3f p2(p1);
+复制构造函数|cv::Point2f p2(p1);
 值构造函数|cv::Point2i(x0, x1);<br>cv::Point3d p(x0, x1, x2);
 构造成固定向量类|(cv::Vec3f) p;
 成员访问|p.x, p.y, p.z
@@ -11,8 +20,8 @@
 叉乘|p1.cross(p2);
 判断点p是否在矩形r内|p.inside(r);
 
-
-#### Scalar类
+----------------------------------------------------------------------------------------------------------------------------------
+## Scalar类
 操作|示例
 -----|------
 默认构造函数|cv::Scalar s;
@@ -23,7 +32,7 @@
 (四元数)真值测试|s.isReal(); //(return true if s1==s2==s3==0)
 
 
-#### Size类
+### Size类
 操作|示例
 ----|----
 默认构造函数|cv::Size sz;<br>cv::Size2i sz;<br>cv::Size2f sz;
@@ -31,3 +40,18 @@
 值构造函数|cv::Size2f sz(w, h);
 成员访问|sz.width; sz.height;
 计算面积|sz.area();
+
+
+### Rect类
+操作|示例
+----|----
+默认构造函数|cv::Rect r;
+复制构造函数|cv::Rect r2(r1);
+值构造函数|cv::Rect(x, y, w, h);
+由起始点和大小构造|cv::Rect(p, sz);
+由两个对角构造|cv::Rect(p1, p2);
+成员访问|r.x; r.y; r.width; r.height; 
+计算面积|r.area();
+提取左上角|r.tl();
+提取右下角|r.br();
+判断点p是否在矩形r内|r.contaions(p);
