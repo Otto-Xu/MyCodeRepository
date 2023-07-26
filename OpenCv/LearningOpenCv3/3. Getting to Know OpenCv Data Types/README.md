@@ -46,6 +46,7 @@ typedef struct CvScalar
 }CvScalar;
 ```
 Scalar是一个由长度为4的数组作为元素构成的结构体，Scalar最多可以存储四个值，没有提供的值默认为0。
+Scalar通常用于对图像通道数进行处理。
 ### Scalar类基本操作函数
 操作|示例
 -----|------
