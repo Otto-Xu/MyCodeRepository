@@ -60,6 +60,20 @@ Scalar通常用于对图像通道数进行处理。
 
 ----------------------------------------------------------------------------------------------------------------------------------
 # Size类
+### 定义
+```
+typedef struct CvSize
+{
+    int width;
+    int height;
+#ifdef __cplusplus
+    template<typename _Tp>
+    operator cv::Size_<_Tp>() const { return cv::Size_<_Tp>(cv::saturate_cast<_Tp>(width), cv::saturate_cast<_Tp>(height)); }
+#endif
+}CvSize;
+```
+Size类在实际操作时与Point类相似，而且可以与Point类互相转换。
+### Size类基本操作函数
 操作|示例
 ----|----
 默认构造函数|cv::Size sz;<br>cv::Size2i sz;<br>cv::Size2f sz;
