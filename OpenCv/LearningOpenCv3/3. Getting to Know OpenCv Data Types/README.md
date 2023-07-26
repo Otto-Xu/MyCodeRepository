@@ -1,4 +1,17 @@
-## Point类
+# Point类
+### 定义
+```
+typedef struct CvPoint
+{
+    int x;
+    int y;
+#ifdef __cplusplus
+    template<typename _Tp>
+    operator cv::Point_<_Tp>() const { return cv::Point_<_Tp>(cv::saturate_cast<_Tp>(x), cv::saturate_cast<_Tp>(y)); }
+#endif
+}
+CvPoint;
+```
 Point类主要有两种模板，一种是二维的点Point2x，一种是三维的点Point3x，x可选如下：
 选项|含义
 ----|----
@@ -7,7 +20,7 @@ s|short int
 i|32-bit int
 f|32-bit float
 d|64-bit float
-#### Point类基本操作函数
+### Point类基本操作函数
 操作|示例
 --------|-----------
 默认构造函数|cv::Point2i p;<br>cv::Point3i p;
@@ -32,7 +45,8 @@ d|64-bit float
 (四元数)真值测试|s.isReal(); //(return true if s1==s2==s3==0)
 
 
-### Size类
+----------------------------------------------------------------------------------------------------------------------------------
+## Size类
 操作|示例
 ----|----
 默认构造函数|cv::Size sz;<br>cv::Size2i sz;<br>cv::Size2f sz;
@@ -42,7 +56,8 @@ d|64-bit float
 计算面积|sz.area();
 
 
-### Rect类
+----------------------------------------------------------------------------------------------------------------------------------
+## Rect类
 操作|示例
 ----|----
 默认构造函数|cv::Rect r;
