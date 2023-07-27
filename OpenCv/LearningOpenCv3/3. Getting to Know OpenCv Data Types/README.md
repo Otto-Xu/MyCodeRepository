@@ -117,7 +117,7 @@ typedef struct CvRect
 ----|----
 矩形r1和矩形r2的交集|cv::Rect r3 = r1 & r2; r1 &= r2;
 同时包含矩形r1和矩形r2的最小面积矩形|cv::Rect r3 = r1 &#124; r2; r1 &#124;= r2;
-平移矩形rx个数量|cv::Rect rx = r + x; r += x;
-扩大矩形rs大小|cv::Rect rs = r + s; r += s;
+平移矩形rx个数量|cv::Rect rx = r + cv::Point(x); r += cv::Point(x);
+扩大矩形rs大小|cv::Rect rs = r + cv::Size(s); r += cv::Size(s);
 比较矩形r1和矩形r2是否相等|bool eq = (r1 == r2);
 比较矩形r1和矩形r2是否不相等|bool ne = (r1 != r2);
