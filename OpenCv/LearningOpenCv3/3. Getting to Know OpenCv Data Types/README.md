@@ -239,3 +239,37 @@ public:
 值构造函数|Vec2f v2f(x0, x1); Vec6d v6d(x0, x1, x2, x3, x4, x5);
 成员访问|v4f[i];v3w(j);
 向量叉乘|v3f.cross(u3f);
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+# Complex类
+### 定义
+```
+template<typename _Tp> class Complex
+{
+public:
+
+    //! default constructor
+    Complex();
+    Complex( _Tp _re, _Tp _im = 0 );
+
+    //! conversion to another data type
+    template<typename T2> operator Complex<T2>() const;
+    //! conjugation
+    Complex conj() const;
+
+    _Tp re, im; //< the real and the imaginary parts
+};
+
+typedef Complex<float> Complexf;
+typedef Complex<double> Complexd;
+```
+### Complex类基本操作函数
+操作|示例
+----|----
+默认构造函数|cv::Complexf z1; cv::Complexd z2;
+复制构造函数|cv::Complexf z2(z1);
+值构造函数|cv::Complexd z1(re0); cv::Complexd(re0, im1);
+复制构造函数|cv::Complexf u2f(v2f);
+成员访问|z1.re; z1.im;
+复共轭|z2 = z1.conj();
