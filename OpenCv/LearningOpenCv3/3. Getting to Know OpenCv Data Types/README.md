@@ -85,6 +85,20 @@ Size类在实际操作时与Point类相似，而且可以与Point类互相转换
 
 ----------------------------------------------------------------------------------------------------------------------------------
 # Rect类
+### 定义
+```
+typedef struct CvRect
+{
+    int x;
+    int y;
+    int width;
+    int height;
+#ifdef __cplusplus
+    template<typename _Tp>
+    operator cv::Rect_<_Tp>() const { return cv::Rect_<_Tp>((_Tp)x, (_Tp)y, (_Tp)width, (_Tp)height); }
+#endif
+}CvRect;
+```
 操作|示例
 ----|----
 默认构造函数|cv::Rect r;
