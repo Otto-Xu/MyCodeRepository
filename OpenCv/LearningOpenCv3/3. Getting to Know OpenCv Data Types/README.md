@@ -32,6 +32,7 @@ d|64-bit float
 叉乘|p1.cross(p2);
 判断点p是否在矩形r内|p.inside(r);
 
+
 ----------------------------------------------------------------------------------------------------------------------------------
 # Scalar类
 ### 定义
@@ -121,3 +122,35 @@ typedef struct CvRect
 扩大矩形rs大小|cv::Rect rs = r + cv::Size(s); r += cv::Size(s);
 比较矩形r1和矩形r2是否相等|bool eq = (r1 == r2);
 比较矩形r1和矩形r2是否不相等|bool ne = (r1 != r2);
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+# RotatedRect类
+### 定义
+```
+class CV_EXPORTS RotatedRect
+{
+public:
+    //构造函数
+    RotatedRect();
+    RotatedRect(const Point2f& center, const Size2f& size, float angle);
+    RotatedRect(const Point2f& point1, const Point2f& point2, const Point2f& point3);
+
+    void points(Point2f pts[]) const;	//返回矩形的4个顶点
+    Rect boundingRect() const;			//返回包含旋转矩形的最小矩形
+    Rect_<float> boundingRect2f() const;//转换到旧式cvbox2d结构
+
+    Point2f center;	//矩形的质心
+    Size2f size;	//矩形的变长
+    float angle;	//旋转角度
+};
+```
+### RotatedRect基本操作函数
+操作|示例
+----|----
+默认构造函数|cv::RotatedRect rr();
+复制构造函数|cv::RotatedRect rr2(rr1);
+从两个点构造|cv::RotatedRect(p1, p2);
+值构造函数|cv::RotatedRect rr(p, sz, theta);
+成员访问|rr.center, rr.size, rr.angle
+返回四个角的列表|rr.points(pts[4]);
