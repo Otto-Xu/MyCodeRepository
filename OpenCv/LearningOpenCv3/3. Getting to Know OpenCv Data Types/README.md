@@ -207,3 +207,35 @@ Matx类是固定小型矩阵类。
 逆矩阵|n44f = m44f.inv(method);
 解线形系统|m31f = m33f.solve(rhs31f, method);<br>m32f = m33f.solve(rhs32f,method);
 每个元素的乘法|m1.mul(m2);
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+# Vec类
+### 定义
+```
+template<typename _Tp, int cn> class Vec : public Matx<_Tp, cn, 1>
+{
+public:
+    typedef _Tp value_type;
+    enum {
+           channels = cn,
+#ifdef OPENCV_TRAITS_ENABLE_DEPRECATED
+           depth    = Matx<_Tp, cn, 1>::depth,
+           type     = CV_MAKETYPE(depth, channels),
+#endif
+           _dummy_enum_finalizer = 0
+         };
+    ···
+    Func();
+    ···
+}
+```
+固定向量类cv::Vec是列为1的cv::Matx<>, 该类拥有相对少的新方法及大量继承自固定矩阵类的方法。
+### Vec类基本操作函数
+操作|示例
+----|----
+默认构造函数|Vec2s v2s; Vec6f v6f;
+复制构造函数|Vec3f u3f(v3f);
+值构造函数|Vec2f v2f(x0, x1); Vec6d v6d(x0, x1, x2, x3, x4, x5);
+成员访问|v4f[i];v3w(j);
+向量叉乘|v3f.cross(u3f);
