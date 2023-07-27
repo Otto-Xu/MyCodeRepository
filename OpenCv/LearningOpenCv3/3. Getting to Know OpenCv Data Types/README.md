@@ -99,6 +99,7 @@ typedef struct CvRect
 #endif
 }CvRect;
 ```
+### Rect类基本操作函数
 操作|示例
 ----|----
 默认构造函数|cv::Rect r;
@@ -111,3 +112,12 @@ typedef struct CvRect
 提取左上角|r.tl();
 提取右下角|r.br();
 判断点p是否在矩形r内|r.contaions(p);
+### Rect对象的覆写操作符
+操作|示例
+----|----
+矩形r1和矩形r2的交集|cv::Rect r3 = r1 & r2; r1 &= r2;
+同时包含矩形r1和矩形r2的最小面积矩形|cv::Rect r3 = r1 `|` r2; r1 `|`= r2;
+平移矩形rx个数量|cv::Rect rx = r + x; r += x;
+扩大矩形rs大小|cv::Rect rs = r + s; r += s;
+比较矩形r1和矩形r2是否相等|bool eq = (r1 == r2);
+比较矩形r1和矩形r2是否不相等|bool ne = (r1 != r2);
