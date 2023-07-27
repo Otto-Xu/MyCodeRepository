@@ -145,6 +145,7 @@ public:
     float angle;	//旋转角度
 };
 ```
+cv::RotatedRect()与rr.points(pts[4])、cv::line()结合一起使用画出矩形。
 ### RotatedRect基本操作函数
 操作|示例
 ----|----
@@ -154,3 +155,4 @@ public:
 值构造函数|cv::RotatedRect rr(p, sz, theta);
 成员访问|rr.center, rr.size, rr.angle
 返回四个角的列表|rr.points(pts[4]);
+返回包含旋转矩形的最小矩形|rr.boundingRect();
