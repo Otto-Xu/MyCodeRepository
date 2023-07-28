@@ -1,0 +1,29 @@
+函数名称|描述
+----|----
+cv::alignPtr() | 将指针与给定的字节数对齐
+cv::alignSize() | 将缓冲区大小与给定的字节数对齐
+cv::allocate() | 分配一个C风格的数组对象
+cvCeil() | 最接近的不小于x的整数
+cv::cubeRoot() | 计算一个数的立方根
+cv::CV_Assert() | 如果给定的条件不为真，则抛出异常
+CV_Error() | 构造cv::Exception(从固定的字符串)并抛出异常的一个宏
+CV_Error_() | 构造cv::Exception(从格式化的字符串)并抛出异常的一个宏
+cv::deallocate() | 释放一个C风格的数组对象
+cv::error() | 指示错误并抛出异常
+cv::fastAtan2() | 向量的二维角度的计算
+cv::fastFree() | 释放一个内存缓存区
+cv::fastMalloc() | 分配一个对齐的内存缓存区
+cvFloor() | 最接近的不大于x的整数
+cv::format() | 以sprintf类似格式创建一个STL字符串
+cv::getCPUTickCount() | 从内部CPU计时器获得tick计数
+cv::getNumThreads() | 获得当前OpenCV使用的线程数
+cv::getOptimalDFTSize() | 计算要传递给cv::DET()的数组的最适宜大小
+cv::getThreadNum() | 获得当前线程的索引
+cv::getTickCount() | 获得系统的tick计数
+cv::getTickFrequency() | 获得每秒的tick数
+cvIsInf() | 判断一个浮点数x是否无穷
+cvIsNaN() | 判断一个浮点数x是否不是一个数
+cvRound() | 近似一个浮点数x到最近的整数
+cv::setNumThreads() | 设定OpenCV使用的线程数
+cv::setUseOptimized() | 开启或关闭优化代码
+cv::useOptimized() | 指示代码优化的启用
