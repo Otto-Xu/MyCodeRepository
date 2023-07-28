@@ -61,7 +61,7 @@ public:
 2.表示范围从start到end，包含start，但不包含end。  
 
 -----------------------------------------------------------------------------------------------------------------------------------
-# cv::Ptr智能指针类
+# cv::Ptr智能指针类和垃圾回收
 ### 定义
 ```
 template<typename T>
@@ -137,16 +137,66 @@ struct Ptr : public std::shared_ptr<T>
 ### Note
 1.cv::Ptr类就看成一个cv的一个智能指针,在适当的时间能自动删除指向的对象；工作机制很像C++的内置指针
 
+
 -----------------------------------------------------------------------------------------------------------------------------------
-#
-###
-###
+# cv::Exception类和异常处理
+### 定义
+```
+class CV_EXPORTS Exception : public std::exception
+{
+public:
+    /*!
+     Default constructor
+     */
+    Exception();
+    /*!
+     Full constructor. Normally the constructor is not called explicitly.
+     Instead, the macros CV_Error(), CV_Error_() and CV_Assert() are used.
+    */
+    Exception(int _code, const String& _err, const String& _func, const String& _file, int _line);
+    virtual ~Exception() throw();
+
+    /*!
+     \return the error description and the context as a text string.
+    */
+    virtual const char *what() const throw() CV_OVERRIDE;
+    void formatMessage();
+
+    String msg; ///< the formatted error message
+
+    int code; ///< error code @see CVStatus
+    String err; ///< error description
+    String func; ///< function name. Available only when the compiler supports getting it
+    String file; ///< source file name where the error has occurred
+    int line; ///< line number in the source file where the error has occurred
+};
+```
+### Node
+1.cv::Exception继承STL的异常类std::exception, 其使用方法一样
+
 -----------------------------------------------------------------------------------------------------------------------------------
-#
-###
-###
------------------------------------------------------------------------------------------------------------------------------------
-#
-###
-###
+# cv::DataType<>模板
+### 定义
+```
+template<typename _Tp> class DataType
+{
+public:
+#ifdef OPENCV_TRAITS_ENABLE_DEPRECATED
+    typedef _Tp         value_type;
+    typedef value_type  work_type;
+    typedef value_type  channel_type;
+    typedef value_type  vec_type;
+    enum { generic_type = 1,
+           depth        = -1,
+           channels     = 1,
+           fmt          = 0,
+           type = CV_MAKETYPE(depth, channels)
+         };
+#endif
+};
+```
+### Node
+1.当OpenCV库函数需要传递特定数据类型的概念时，它们会创建一个​​cv::DataType<>​​​类型的对象。​​cv::DataType<>​​本身是一个模板，传递的实际对象是这个模板的特化。
+
+
 -----------------------------------------------------------------------------------------------------------------------------------
