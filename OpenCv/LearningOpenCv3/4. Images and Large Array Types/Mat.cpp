@@ -73,8 +73,8 @@ void constructors()
 
 	//构造一个如同cv::Matx所指定的数据类型的T,大小为m * n的二维数组
 	cv::Matx<float, 3, 3> m33f = {	1, 2, 3,
-									4, 5, 6, 
-									7, 8, 9};
+					4, 5, 6, 
+					7, 8, 9};
 	Mat m12(m33f, true);
 	cout << "m12 = \n" << m12 << endl;
 	cout << "----------------------" << endl;
