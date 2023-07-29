@@ -6,7 +6,7 @@
 |指针|一个指向数据真正存储位置的`data`指针<br>一个引用计数器`refcount`
 |补充|`flag`是int类型，共占32位。<br>0-2位代表depth，3-11代表通道数channels，0-11位共同代表type(如CV_8UC3)。<br>14位代表Mat的内存是否连续。<br>15位代表该Mat是否为某一个Mat的submatrix。<br>16-31位代表magic signature，区分Mat的类型，如Mat和SparseMat。
   
-Mat类的通道数和维数理解起来好抽象。
+cv::Mat中的元素可以是一个简单的数字，也可以是多个数字。在包含多个数字的时候，它就被称为“多通道数组”
 ```
 /*二维单通道*/
 cv::Mat m0(3, 3, CV_8UC1, Scalar(2));
