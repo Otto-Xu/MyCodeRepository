@@ -104,4 +104,8 @@ cv::SparseMat::find();
 |cv::SparseMatIterator<float> it = sm.begin<float>();|Create a sparse matrix iterator it and point it at the first value of the floating-point array sm
 |cv::SparseMatIterator<uchar> it_end = sm.end<uchar>();|Create a sparse matrix iterator it_end and initialize it to the value succeeding the final value in the byte array sm|
 
-
+# 为大型数组准备的模板结构
+```
+cv::Mat_<>
+cv::SparseMat_<>
+```
