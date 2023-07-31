@@ -20,6 +20,9 @@ m1 = {{1,2,3}, {1,2,3}, {1,2,3},
       {1,2,3}, {1,2,3}, {1,2,3},
       {1,2,3}, {1,2,3}, {1,2,3},};
 ```
+### 数组迭代器NAryMatlterator
+
+
 ### 矩阵表达式
 |示例|描述|
 |----|----|
@@ -39,4 +42,28 @@ m1 = {{1,2,3}, {1,2,3}, {1,2,3},
 |cv::Mat::eye( Nr, Nc, type );<br>cv::Mat::zeros( Nr, Nc, type );<br>cv::Mat::ones( Nr, Nc, type );|用于返回规定类型的N*N矩阵的静态方法|
 ### 饱和转换
 `cv::saturation_cast<>()`
-, 
+### 成员函数
+|示例|描述|
+|----|----|
+|m1 = m0.clone();| Make a complete copy of m0, copying all data elements as well; cloned array will be continuous|
+|m0.copyTo( m1 );| Copy contents of m0 onto m1, reallocating m1 if necessary (equivalent to m1=m0.clone())|
+|m0.copyTo( m1, mask);|Same as m0.copyTo(m1), except only entries indicated in the array mask are copied|
+|m0.convertTo(m1, type, scale,offset);|Convert elements of m0 to type (e.g., CV_32F) and write to m1 after scaling by scale (default 1.0)and adding offset (default0.0)|
+|m0.assignTo( m1, type);|Internal use only (resembles convertTo)|
+|m0.setTo( s, mask );| Set all entries in m0 to singleton value s; if mask is present, set only those values corresponding to nonzero elements in mask|
+|m0.reshape( chan,rows );|Changes effective shape of a two-dimensional matrix; chan or rows may be zero, which implies “no change”; data is not copied|
+|m0.push_back( s );| Extend an m × 1 matrix and insert the singleton s at the end|
+|m0.push_back( m1 );| Extend an m × n by k rows and copy m1 into those rows; m1 must be k × n|
+|m0.pop_back( n );| Remove n rows from the end of an m × n (default value of n is 1)|
+|m0.locateROI( size,offset );| Write whole size of m0 to cv::Size size; if m0 is a “view” of a larger matrix, write location of starting corner to Point& offset|
+|m0.adjustROI( t, b,l, r );|Increase the size of a view by t pixels above, b pixels below, l pixels to the left, and r pixels to the right|
+|m0.total();| Compute the total number of array elements (does not include channels)|
+|m0.isContinuous();| Return true only if the rows in m0 are packed without space between them in memory|
+|m0.elemSize();| Return the size of the elements of m0 in bytes (e.g., a three-channel float matrix would return 12 bytes)|
+|m0.elemSize1();| Return the size of the subelements of m0 in bytes (e.g., a three-channel float matrix would return 4 bytes)|
+|m0.type();| Return a valid type identifier for the elements of m0 (e.g., CV_32FC3)|
+|m0.depth();| Return a valid type identifier for the individial channels of m0 (e.g., CV_32F)|
+|m0.channels();| Return the number of channels in the elements of m0|
+|m0.size();| Return the size of the m0 as a cv::Size object|
+|m0.empty();| Return true only if the array has no elements (i.e., m0.total==0 or m0.data==NULL)|
+
