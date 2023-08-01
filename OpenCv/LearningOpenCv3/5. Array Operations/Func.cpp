@@ -123,8 +123,8 @@ void MatcalcCovarMatrix()
 	Mat_<double> covMat1;
 	Mat_<double> meanMat1;
 	calcCovarMatrix(samples, 3, covMat1, meanMat1, cv::COVAR_NORMAL);
-	cout << "meanMat1" << meanMat1 << endl;
-	cout << "covMat1" << covMat1 << endl;
+	cout << meanMat1 << endl;
+	cout << covMat1 << endl;
 
 	cout << "------------------" << endl;
 	Mat_<double> covMat2;
@@ -132,8 +132,21 @@ void MatcalcCovarMatrix()
 	float data[] = { 1, 4, 7, 3, 6, 9, 2, 5, 8 };
 	Mat m1(3, 3, CV_32FC1, data);
 	calcCovarMatrix(m1, covMat2, meanMat2, cv::COVAR_ROWS);
-	cout << "meanMat2" << meanMat2 << endl;
-	cout << "covMat2" << covMat2 << endl;
+	cout << meanMat2 << endl;
+	cout << covMat2 << endl;
+}
+
+void MatcartToPolar()
+{
+	float data1[] = { 1, 4, 7, 3, 6, 9, 2, 5, 8 };
+	float data2[] = { 9, 5, 1, 8, 4, 7, 6, 2, 3 };
+	Mat x(3, 3, CV_32FC1, data1);
+	Mat y(3, 3, CV_32FC1, data2);
+
+	Mat magnitude, angle;
+	cartToPolar(x, y, magnitude, angle);
+	cout << magnitude << endl;
+	cout << angle << endl;
 }
 
 int main()
@@ -153,6 +166,9 @@ int main()
 	cout << "----------------MatcalcCovarMatrix----------------" << endl;
 	MatcalcCovarMatrix();
 
+	cout << "----------------MatcartToPolar----------------" << endl;
+	MatcartToPolar();
+
 	waitKey(0);
-  return 0;
+    return 0;
 }
