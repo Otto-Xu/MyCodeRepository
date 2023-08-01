@@ -146,6 +146,7 @@ void MatcartToPolar()
 	/*
  		作用1：根据勾股定理求出另一条边的长度和三角形的角度（y/x=tan α）。
 		作用2：取梯度幅值和方向。先用sobel求出水平和垂直方向的梯度，再用cartToPolar求出梯度幅值和方向。
+  		作用3：zhi jiao zuo biao zhuan huan 极坐标?
  	*/
 	float data1[] = { 1, 4, 7, 3, 6, 9, 2, 5, 8 };
 	float data2[] = { 9, 5, 1, 8, 4, 7, 6, 2, 3 };
