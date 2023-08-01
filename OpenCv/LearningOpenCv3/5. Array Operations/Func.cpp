@@ -53,6 +53,7 @@ void MatAdd()
 void MatAddWeighted()
 {
 	/*
+                权值相加
 		两个相加的矩阵数据类型相同，大小相等
 	*/
 	Mat m1(3, 3, CV_8UC1, Scalar(5));
@@ -77,6 +78,9 @@ void MatAddWeighted()
 
 void MatBitwise()
 {
+	/*
+ 		按位与、或、非、异或操作
+ 	*/
 	float data1[] = { 9, 5, 1, 7, 3, 6, 2, 4, 8 };
 	Mat m1(3, 3, CV_32FC1, data1);
 
@@ -107,6 +111,7 @@ void MatBitwise()
 void MatcalcCovarMatrix()
 {
 	/*
+ 		作用：计算协方差
 		calcCovarMatrix的两种重载方法
 		第一种方法的参数1不能是单独一个n*m的矩阵，必须是有n个1*m(或是m个n*1)的矩阵组成
 		第二种方法的参数1可以是单独一个矩阵，但是flag指定cv::COVAR_ROWS或cv::COVAR_COLS
@@ -138,6 +143,10 @@ void MatcalcCovarMatrix()
 
 void MatcartToPolar()
 {
+	/*
+ 		作用1：根据勾股定理求出另一条边的长度和三角形的角度（y/x=tan α）。
+		作用2：取梯度幅值和方向。先用sobel求出水平和垂直方向的梯度，再用cartToPolar求出梯度幅值和方向。
+ 	*/
 	float data1[] = { 1, 4, 7, 3, 6, 9, 2, 5, 8 };
 	float data2[] = { 9, 5, 1, 8, 4, 7, 6, 2, 3 };
 	Mat x(3, 3, CV_32FC1, data1);
