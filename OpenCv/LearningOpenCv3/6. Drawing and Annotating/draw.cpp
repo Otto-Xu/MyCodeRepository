@@ -24,13 +24,28 @@ int main()
 	fillConvexPoly(src, p1, 4, Scalar(0, 0, 255), 8);
 
 	//画一个填充的任意多边形
-	//fillPoly
+	Point p3[1][5];
+	p3[0][0] = Point(100, 350);
+	p3[0][1] = Point(200, 300);
+	p3[0][2] = Point(300, 350);
+	p3[0][3] = Point(150, 400);
+	p3[0][4] = Point(70, 380);
+	const Point* ppts[] = { p3[0] };
+	int npt[] = { 5 };
+	fillPoly(src, ppts, npt, 1, Scalar(255, 0, 255), 8, 0);
 
 	//画直线
 	line(src, Point(40, 150), Point(140, 200), Scalar(255, 0, 0));
 
 	//画多重折线
-	//polyLines
+	Point p4[1][5];
+	p4[0][0] = Point(300, 350);
+	p4[0][1] = Point(300, 320);
+	p4[0][2] = Point(300, 150);
+	p4[0][3] = Point(350, 200);
+	p4[0][4] = Point(370, 380);
+	const Point* pppts[] = { p4[0] };
+	polylines(src, pppts, npt, 1, true, Scalar(0, 200, 200), 2);
 
 	//画矩形
 	rectangle(src, Rect(200, 200, 50, 150), Scalar(0, 255, 0));
