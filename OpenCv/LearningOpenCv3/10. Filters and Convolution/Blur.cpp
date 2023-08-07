@@ -8,7 +8,7 @@ using namespace cv;
 		cv::InputArray		src,					// Input image
 		cv::0utputArray 	dst,					// Result image
 		cv::Size		ksize,					// Kernel size
-		cv::Pointint		anchor = cv::Point(-1,-1)，		// Location of anchor point
+		cv::Pointint		anchor = cv::Point(-1,-1),		// Location of anchor point
 		int			borderType = cv::BORDER_DEFAULT 	// Border extrapolation to use
 	);
 
@@ -17,7 +17,7 @@ using namespace cv;
 		cv::0utputArray 	dst,					// Result image
 		int			ddepth,					// 0utput depth (e.g.,CV_8U)
 		cv::Size		ksize,					// Kernel size
-		cv::Pointint		anchor = cv::Point(-1,-1)，		// Location of anchor point
+		cv::Pointint		anchor = cv::Point(-1,-1),		// Location of anchor point
 		bool			normalize = true,			// If true, divide by box area
 		int			borderType = cv::BORDER_DEFAULT 	// Border extrapolation to use
 	);
