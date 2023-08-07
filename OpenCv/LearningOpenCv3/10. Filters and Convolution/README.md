@@ -14,3 +14,18 @@ cv::BORDER_DEFAULT|cv::BORDER_REFLECT_101的别名
 ### cv::borderInterpolate()
 ----------------------------------------------------------------------------------------------------------
 # 阈值化操作
+### cv::threshold()中的thresholdType的可选项
+阈值类型|操作
+----|----
+cv::THRESH_BINARY | DST = (SRC > thresh) ? MAXVALUE : 0
+cv::THRESH_BINARY_INV | DST = (SRC > thresh) ? 0 : MAXVALUE
+cv::THRESH_TRUNC | DST = (SRC > thresh) ? THRESH : SRC
+cv::THRESH_TOZERO | DST = (SRC > thresh) ? SRC : 0
+cv::THRESH_TOZERO_INV | DST = (SRC > thresh) ? 0 : SRC
+
+----------------------------------------------------------------------------------------------------------
+# Otsu算法
+----------------------------------------------------------------------------------------------------------
+# 自适应阈值
+### 概述
+相比于一般的阈值化操作，当图像中出现较大的明暗差异时，自适应阈值是非常有效的。
