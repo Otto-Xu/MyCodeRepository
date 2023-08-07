@@ -47,7 +47,7 @@ int main()
 	boxFilter(src, dst, CV_8U, cv::Size(3, 3), cv::Point(-1, -1), true, BORDER_DEFAULT);
 	imshow("boxFilter1", dst);
 
-	boxFilter(src, dst, CV_16U, cv::Size(3, 3), cv::Point(-1, -1), true, BORDER_DEFAULT);
+	boxFilter(src, dst, CV_8U, cv::Size(5, 5), cv::Point(-1, -1), true, BORDER_DEFAULT);
 	imshow("boxFilter2", dst);
 
 	waitKey(0);
