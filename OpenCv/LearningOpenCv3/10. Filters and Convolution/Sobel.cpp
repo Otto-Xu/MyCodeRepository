@@ -12,7 +12,7 @@ void cv::Sobel(
 	int			yorder,			// order of corresponding derivative in y
 	cv::Size		ksize = 3,		// Kernel size
 	double			scale = 1,		// Scale(applied before assignment)
-	double			delta = 0，		// Offset(applied before assignment)
+	double			delta = 0,		// Offset(applied before assignment)
 	int			broderType		// Border extrapolation
 );
 
