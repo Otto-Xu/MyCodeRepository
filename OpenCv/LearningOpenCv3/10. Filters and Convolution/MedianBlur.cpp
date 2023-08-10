@@ -3,9 +3,17 @@
 using namespace std;
 using namespace cv;
 
+/*
+	void cv::medianBlur(
+		cv::InputArray	src,	// Input image
+		cv::OutputArray dst,	// Result image
+		cv::Size		ksize	// Kernel size
+	);
+
+*/
 int main()
 {
-	string path = "C:\\Users\\xuxide\\Desktop\\opencv\\hand1.jpg";
+	string path = "C:\\Users\\xuxide\\Desktop\\opencv\\Lenna.jpg";
 	Mat src = imread(path), dst;
 	if (src.empty())
 	{
