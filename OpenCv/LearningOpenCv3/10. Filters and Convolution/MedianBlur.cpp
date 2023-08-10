@@ -7,7 +7,7 @@ using namespace cv;
 	void cv::medianBlur(
 		cv::InputArray	src,	// Input image
 		cv::OutputArray dst,	// Result image
-		cv::Size		ksize	// Kernel size
+		cv::Size	ksize	// Kernel size
 	);
 
 */
