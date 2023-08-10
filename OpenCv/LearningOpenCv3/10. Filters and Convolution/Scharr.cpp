@@ -5,14 +5,14 @@ using namespace cv;
 
 /*
 void cv::Scharr(
-	cv::InputArray		src,							// Input image
-	cv::0utputArray		dst,							// Result image
-	int					ddepth,							// Pixel depth of output(e.g., CV_8U)
-	int					dx,								// order of corresponding derivative in x
-	int					dy,								// order of corresponding derivative in y
-	double				scale = 1.0,					// Scale(applied before assignment)
-	double				delta = 0.0,					// Offset(applied before assignment)
-	int					broderType = BORDER_DEFAULT		// Border extrapolation
+	cv::InputArray		src,					// Input image
+	cv::0utputArray		dst,					// Result image
+	int			ddepth,					// Pixel depth of output(e.g., CV_8U)
+	int			dx,					// order of corresponding derivative in x
+	int			dy,					// order of corresponding derivative in y
+	double			scale = 1.0,				// Scale(applied before assignment)
+	double			delta = 0.0,				// Offset(applied before assignment)
+	int			broderType = BORDER_DEFAULT		// Border extrapolation
 );
 
 dx和dy不能同时求导
