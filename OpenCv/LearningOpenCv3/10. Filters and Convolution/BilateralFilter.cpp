@@ -12,6 +12,8 @@ void cv::bilateralFilter(
 	double 			sigmaSpace,				// Width param for spatial.weight function
 	int			borderType = cv::BORDER_DEFAULT 	// Border extrapolation to use
 );
+
+sigmaColor值越大，平滑时所包括的强度(色彩)越大，因此图像的不连续性将会更显著。
 */
 
 int main()
