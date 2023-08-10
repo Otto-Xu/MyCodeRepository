@@ -16,8 +16,8 @@ void cv::bilateralFilter(
 
 int main()
 {
-	string path = "C:\\Users\\xuxide\\Desktop\\opencv\\hand1.jpg";
-	Mat src = imread(path), dst;
+	string path = "C:\\Users\\xuxide\\Desktop\\opencv\\Lenna.jpg";
+	Mat src = imread(path), dst1, dst2;
 	if (src.empty())
 	{
 		cout << "can not load " << path << endl;
@@ -25,11 +25,14 @@ int main()
 	}
 	imshow(path, src);
 
-	bilateralFilter(src, dst, -1, 1, 10, BORDER_DEFAULT);
-	imshow("blur1", dst);
+	GaussianBlur(src, dst1, cv::Size(3,3), 0, 0);
+	imshow("dst1", dst1);
 
-	bilateralFilter(src, dst, 9, 0.0, 150, BORDER_DEFAULT);
-	imshow("blur2", dst);
+	bilateralFilter(src, dst2, 5, 1, 10, BORDER_DEFAULT);
+	imshow("blur1", dst2);
+
+	bilateralFilter(src, dst2, 9, 200, 10, BORDER_DEFAULT);
+	imshow("blur2", dst2);
 
 	waitKey(0);
 	return 0;
