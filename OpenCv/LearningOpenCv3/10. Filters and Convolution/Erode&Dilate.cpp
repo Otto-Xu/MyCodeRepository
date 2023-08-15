@@ -9,8 +9,8 @@ void cv::erode(
 	cv::0utputArray		dst,							// Result image
 	cv::InputArray		element,						// Structuring, a cv::Mat()
 	cv::Point		anchor		= cv::Point(-1,-1),			// Location of anchor point
-	int			iterations	= 1£¬					// Number of times to apply
-	int			borderType	= cv::BORDER CONSTANT			// Border extrapolation
+	int			iterations	= 1,					// Number of times to apply
+	int			borderType	= cv::BORDER CONSTANT,			// Border extrapolation
 	const cv::Scalar&	borderValue = cv::morphologyDefaultBorderValue()
 );
 
@@ -19,8 +19,8 @@ void cv::dilate(
 	cv::0utputArray		dst,							// Result image
 	cv::InputArray		element,						// Structuring, a cv::Mat()
 	cv::Point		anchor		= cv::Point(-1,-1),			// Location of anchor point
-	int			iterations	= 1£¬					// Number of times to apply
-	int			borderType	= cv::BORDER CONSTANT			// Border extrapolation
+	int			iterations	= 1,					// Number of times to apply
+	int			borderType	= cv::BORDER CONSTANT,			// Border extrapolation
 	const cv::Scalar&	borderValue = cv::morphologyDefaultBorderValue()
 );
 */
