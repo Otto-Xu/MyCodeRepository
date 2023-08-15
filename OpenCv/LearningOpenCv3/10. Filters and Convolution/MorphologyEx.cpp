@@ -11,7 +11,7 @@ void cv::morphologyEx(
 	cv::InputArray		element,						// Structuring, a cv::Mat()
 	cv::Point		anchor		= cv::Point(-1,-1),			// Location of anchor point
 	int			iterations	= 1，					// Number of times to apply
-	int			borderType	= cv::BORDER CONSTANT			// Border extrapolation
+	int			borderType	= cv::BORDER_CONSTANT			// Border extrapolation
 	const cv::Scalar&	borderValue     = cv::morphologyDefaultBorderValue() 
 );
 
