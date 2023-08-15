@@ -11,7 +11,7 @@ void cv::erode(
 	cv::Point		anchor		= cv::Point(-1,-1),			// Location of anchor point
 	int			iterations	= 1,					// Number of times to apply
 	int			borderType	= cv::BORDER CONSTANT,			// Border extrapolation
-	const cv::Scalar&	borderValue = cv::morphologyDefaultBorderValue()
+	const cv::Scalar&	borderValue 	= cv::morphologyDefaultBorderValue()
 );
 
 void cv::dilate(
@@ -21,7 +21,7 @@ void cv::dilate(
 	cv::Point		anchor		= cv::Point(-1,-1),			// Location of anchor point
 	int			iterations	= 1,					// Number of times to apply
 	int			borderType	= cv::BORDER CONSTANT,			// Border extrapolation
-	const cv::Scalar&	borderValue = cv::morphologyDefaultBorderValue()
+	const cv::Scalar&	borderValue 	= cv::morphologyDefaultBorderValue()
 );
 */
 
