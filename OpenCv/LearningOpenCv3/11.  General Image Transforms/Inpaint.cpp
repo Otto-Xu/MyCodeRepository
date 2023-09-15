@@ -36,7 +36,7 @@ int main()
 	Mat Kernel = getStructuringElement(MORPH_RECT, Size(3,3));
 	dilate(imgMask, imgMask, Kernel);
 
-	//修复
+	//修复白色污染区域
 	Mat imgInpaint;
 	inpaint(src,imgMask, imgInpaint, 5, INPAINT_NS);
 
