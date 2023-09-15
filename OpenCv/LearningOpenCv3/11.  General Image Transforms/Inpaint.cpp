@@ -24,15 +24,19 @@ int main()
 	}
 	imshow(path, src);
 
+	//转为灰度图
 	Mat gray;
 	cvtColor(src, gray, COLOR_BGR2GRAY);
 
+	//通过阈值化处理，提取白色污染区域
 	Mat imgMask;
 	threshold(gray, imgMask, 245, 255, THRESH_BINARY);
 
+	//膨胀
 	Mat Kernel = getStructuringElement(MORPH_RECT, Size(3,3));
 	dilate(imgMask, imgMask, Kernel);
 
+	//修复
 	Mat imgInpaint;
 	inpaint(src,imgMask, imgInpaint, 5, INPAINT_NS);
 
