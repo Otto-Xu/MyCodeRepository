@@ -1,74 +1,74 @@
 Function|Description
 ----|----
-cv::abs()| Return absolute value of all elements in an array
-cv::absdiff()| Return absolute value of differences between two arrays
-cv::add()| Perform element-wise addition of two arrays
-cv::addWeighted()| Perform element-wise weighted addition of two arrays (alpha blending)
-cv::bitwise_and()| Compute element-wise bit-level AND of two arrays
-cv::bitwise_not()| Compute element-wise bit-level NOT of two arrays
-cv::bitwise_or()| Compute element-wise bit-level OR of two arrays
-cv::bitwise_xor()| Compute element-wise bit-level XOR of two arrays
-cv::calcCovarMatrix()| Compute covariance of a set of n-dimensional vectors
-cv::cartToPolar()| Compute angle and magnitude from a two-dimensional vector field
-cv::checkRange()| Check array for invalid values
-cv::compare()| Apply selected comparison operator to all elements in two arrays
-cv::completeSymm()| Symmetrize matrix by copying elements from one half to the other
-cv::convertScaleAbs()| Scale array, take absolute value, then convert to 8-bit unsigned
-cv::countNonZero()| Count nonzero elements in an array
-cv::arrToMat()| Convert pre–version 2.1 array types to cv::Mat
-cv::dct()| Compute discrete cosine transform of array
-cv::determinant()| Compute determinant of a square matrix
-cv::dft()| Compute discrete Fourier transform of array
-cv::divide()| Perform element-wise division of one array by another
-cv::eigen()| Compute eigenvalues and eigenvectors of a square matrix
-cv::exp()| Perform element-wise exponentiation of array
-cv::extractImageCOI()| Extract single channel from pre–version 2.1 array type
-cv::flip()| Flip an array about a selected axis
-cv::gemm()| Perform generalized matrix multiplication
-cv::getConvertElem()| Get a single-pixel type conversion function
-cv::getConvertScaleElem()| Get a single-pixel type conversion and scale function
-cv::idct()| Compute inverse discrete cosine transform of array
-cv::idft()| Compute inverse discrete Fourier transform of array
-cv::inRange()| Test if elements of an array are within values of two other arrays
-cv::invert()| Invert a square matrix
-cv::log()| Compute element-wise natural log of array
-cv::magnitude()| Compute magnitudes from a two-dimensional vector field
-cv::LUT()| Convert array to indices of a lookup table
-cv::Mahalanobis()| Compute Mahalanobis distance between two vectors
-cv::max()| Compute element-wise maxima between two arrays
-cv::mean()| Compute the average of the array elements
-cv::meanStdDev()| Compute the average and standard deviation of the array elements
-cv::merge()| Merge severalsingle-channel arrays into one multichannel array
-cv::min()| Compute element-wise minima between two arrays
-cv::minMaxLoc()| Find minimum and maximum values in an array
-cv::mixChannels()| Shuffle channels from input arrays to output arrays
-cv::mulSpectrums()| Compute element-wise multiplication of two Fourier spectra
-cv::multiply()| Perform element-wise multiplication of two arrays
-cv::mulTransposed()| Calculate matrix product of one array
-cv::norm()| Compute normalized correlations between two arrays
-cv::normalize()| Normalize elements in an array to some value
-cv::perspectiveTransform()| Perform perspective matrix transform of a list of vectors
-cv::phase()| Compute orientations from a two-dimensional vector field
-cv::polarToCart()| Compute two-dimensional vector field from angles and magnitudes
-cv::pow()| Raise every element of an array to a given power
-cv::randu()| Fill a given array with uniformly distributed random numbers
-cv::randn()| Fill a given array with normally distributed random numbers
-cv::randShuffle()| Randomly shuffle array elements
-cv::reduce()| Reduce a two-dimensional array to a vector by a given operation
-cv::repeat()| Tile the contents of one array into another
-cv::saturate_cast<>()| Convert primitive types (template function)
-cv::scaleAdd()| Compute element-wise sum of two arrays with optionalscaling of the first
-cv::setIdentity()| Set all elements of an array to 1 for the diagonal and 0 otherwise
-cv::solve()| Solve a system of linear equations
-cv::solveCubic()| Find the (only) real roots of a cubic equation
-cv::solvePoly()| Find the complex roots of a polynomial equation
-cv::sort()| Sort elements in either the rows or columns in an array
-cv::sortIdx()| Serve same purpose as cv::sort(), except array is unmodified and indices are returned
-cv::split()| Split a multichannel array into multiple single-channel arrays
-cv::sqrt()| Compute element-wise square root of an array
-cv::subtract()| Perform element-wise subtraction of one array from another
-cv::sum()| Sum all elements of an array
-cv::theRNG()| Return a random number generator
-cv::trace()| Compute the trace of an array
-cv::transform()| Apply matrix transformation on every element of an array
-cv::transpose()| Transpose all elements of an array across the diagonal
+cv::abs()|计算矩阵中所有元素的绝对值
+cv::absdiff()|计算两个矩阵差值的绝对值
+cv::add()|实现两个矩阵逐元素相加
+cv::addWeighted()|实现两个矩阵逐元素加权求和(混合值)
+cv::bitwise_and()|计算两个矩阵逐元素按位与
+cv::bitwise_not()|按位非
+cv::bitwise_or()|计算两个矩阵逐元素按位或
+cv::bitwise_xor()|计算两个矩阵逐元素按位异或
+cv::calcCovarMatrix()|计算一组n维向量的协方差
+cv::cartToPolar()|计算二维向量的角度和幅度
+cv::checkRange()|检查矩阵的无效值
+cv::compare()|对两个矩阵中的所有元素应用所选择的比较运算符
+cv::completeSymm()|通过将一半元素复制到另一半来使矩阵对称
+cv::convertScaleAbs()|缩放矩阵，取绝对值，然后转换为8位无符号数
+cv::countNonZero()|计算矩阵中非零元素个数
+cv::arrToMat()|将2.1版本的矩阵类型转换为cv::Mat
+cv::dct()|计算矩阵的离散余弦变换
+cv::determinant()|计算方阵的行列式
+cv::dft()|计算矩阵的离散傅里叶变换
+cv::divide()|实现两个矩阵逐元素相除
+cv::eigen()|计算方阵的特征值和特征向量
+cv::exp()|实现矩阵的逐元素求指数幂
+cv::extractImageCOI()|从2.1版本的矩阵类型中提取单个通道
+cv::flip()|绕选定的轴翻转矩阵
+cv::gemm()|实现广义矩阵乘法
+cv::getConvertElem()|获取单像素类型转换函数
+cv::getConvertScaleElem()|获取单像素类型的转换和缩放函数
+cv::idct()|计算矩阵的离散余弦逆变换
+cv::idft()|计算矩阵的离散傅里叶逆变换
+cv::inRange()|测试矩阵的元素是否在两个其他矩阵的值之间
+cv::invert()|求方阵的逆
+cv::log()|计算矩阵逐元素的自然对数
+cv::magnitude()|计算二维向量的幅度
+cv::LUT()|将矩阵转换为查找表的索引
+cv::Mahalanobis()|计算两个向量之间的马氏距离
+cv::max()|计算两个矩阵逐元素的最大值
+cv::mean()|计算矩阵元素的平均值
+cv::meanStdDev()|计算矩阵元素的均值和标准差
+cv::merge()|将多个单通道矩阵合并成一个多通道矩阵
+cv::min()|计算两个矩阵逐元素的最小值
+cv::minMaxLoc()|在矩阵中寻找最小值和最大值
+cv::mixChannels()|打乱从输入矩阵到输出矩阵的通道
+cv::mulSpectrums()|计算两个傅里叶谱的逐元素乘积
+cv::multiply()|计算两个矩阵的逐元素乘积
+cv::mulTransposed()|计算矩阵和矩阵的转置的乘积
+cv::norm()|计算两个矩阵的归一化相关系数
+cv::normalize()|将矩阵中的元素标准化到某一数值内
+cv::perspectiveTransform()|实现一系列向量的透视矩阵变换
+cv::phase()|计算二维向量的方向
+cv::polarToCart()|已知角度和幅度，求出对应的二维向量
+cv::pow()|对矩阵内的每个元素求幂
+cv::randu()|用均匀分布的随机数填充给定的矩阵
+cv::randn()|用正态分布的随机数填充给定的矩阵
+cv::randShuffle()|随机打乱矩阵元素
+cv::reduce()|通过特定的操作将二维矩阵缩减为向量
+cv::repeat()|将一个矩阵的内容复制到另一个矩阵
+cv::saturate_cast<>()|转换原始类型(模板函数)
+cv::scaleAdd()|逐元素计算两个矩阵的和并且第一个矩阵可以选择缩放
+cv::setIdentity()|将矩阵中对角线上的元素设为1，其他置0
+cv::solve()|求出线性方程组的解
+cv::solveCubic()|找到(唯一的)三次方程的实根
+cv::solvePoly()|找到多项式方程的复根
+cv::sort()|在矩阵中排序任意行或列的元素
+cv::sortIdx()|与cv::sort()的目的相同，除了矩阵是未修改的，并返回索引
+cv::split()|将一个多通道矩阵分割成多个单通道矩阵
+cv::sqrt()|计算矩阵逐元素的平方根
+cv::subtract()|实现两个矩阵逐元素相减
+cv::sum()|对矩阵中的所有元素求和
+cv::theRNG()|返回随机数生成器
+cv::trace()|计算一个矩阵的迹
+cv::transform()|在矩阵的每个元素上应用矩阵变换
+cv::transpose()|矩阵的转置运算
