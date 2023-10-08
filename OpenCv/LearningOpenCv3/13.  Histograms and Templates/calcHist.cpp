@@ -2,7 +2,20 @@
 #include <iostream>
 using namespace std;
 using namespace cv;
-
+/*
+	void cv::calcHist(
+		const cv::Mat* images, // 输入图像
+		int nimages, // 输入图像的个数
+		const int* channels, // 需要统计直方图的第几通道
+		cv::InputArray mask, // 掩码
+		cv::OutputArray hist, // 输出的直方图数组
+		int dims, // 需要统计直方图通道的个数
+		const int* histSize, // 指的是直方图分成多少个区间
+		const float** ranges, // 统计像素值的区间
+		bool uniform = true, // 是否对直方图数组进行归一化处理
+		bool accumulate = false // 在多个图象时，是否累计计算像素值的个数
+	);
+*/
 int main()
 {
 	string path = "C:\\Users\\xuxide\\Desktop\\opencv\\Lenna.jpg";
