@@ -2,6 +2,7 @@
 # 离散傅里叶变换
 ### 离散傅里叶变换原理
 说明：对一张图像使用傅里叶变换就是将它分解成正弦和余弦两部分，也就是将图像从空间域(spatial domain)转换到频域(frequency domain)。傅里叶变换就是一个用来将函数分解的工具，任一函数都可以表示成无数个正弦和余弦函数的和的形式。
+![image](https://github.com/Otto-Xu/MyCodeRepository/blob/master/OpenCv/LearningOpenCv3/12.%20Image%20Analysis/%E4%BA%8C%E7%BB%B4%E5%9B%BE%E5%83%8F%E7%9A%84%20%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2%E5%85%AC%E5%BC%8F.png)
 ### 
 ----------------------------------------------------------------------
 # 积分图
